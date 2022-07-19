@@ -198,9 +198,9 @@
             this._spritesheetXMLPathLbl.AutoSize = true;
             this._spritesheetXMLPathLbl.Location = new System.Drawing.Point(11, 51);
             this._spritesheetXMLPathLbl.Name = "_spritesheetXMLPathLbl";
-            this._spritesheetXMLPathLbl.Size = new System.Drawing.Size(113, 13);
+            this._spritesheetXMLPathLbl.Size = new System.Drawing.Size(110, 13);
             this._spritesheetXMLPathLbl.TabIndex = 1;
-            this._spritesheetXMLPathLbl.Text = "Spritesheet XML Path:";
+            this._spritesheetXMLPathLbl.Text = "SpriteData XML Path:";
             // 
             // _atlasImagePathLbl
             // 
