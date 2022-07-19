@@ -10,6 +10,8 @@ For example:
 
 >Please note: You do not **need** BannerEdge to mod the atlas images, as it is possible to manipulate the images directly after extracting with TpacTool, but this has the drawback of "guessing" the pixel perfect positions of the individual sprite parts to make sure that they align ingame with other parts. Also, with every new release version, the game developer TaleWorlds regenerates the atlas images themselves and the positions of the individual parts within the atlas shifts around, making your work obsolete and having to start again from scratch. Using BannerEdge in conjunction with the official modding kit avoids this problem.
 
+You can find more information regarding how the game uses sprites in the official modding documentation: http://docs.modding.bannerlord.com/asset-management/generating_and_loading_ui_sprite_sheets/ 
+
 # How to use
 #### Prerequisites:
 * .NET Framework 4.8 (runtime) https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48
