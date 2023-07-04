@@ -15,7 +15,7 @@ You can find more information regarding how the game uses sprites in the officia
 # How to use
 #### Prerequisites:
 * .NET Framework 4.8 (runtime) https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48
-* TpacTool https://github.com/hunharibo/TpacTool/releases
+* TpacTool https://github.com/szszss/TpacTool/releases
 * Bannerlord the game on Steam platform (if you own the game on any other platform you are out of luck)
 * Bannerlord modding kit on Steam platform
 * A module created for your mod
