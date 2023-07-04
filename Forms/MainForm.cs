@@ -268,7 +268,7 @@ namespace BannerEdge
                 MainPicturePanel.Controls.Clear();
                 AddMainAtlasToFlowPanel();
             }
-            if (String.IsNullOrEmpty(_searchBoxTxt.Text))
+            if (string.IsNullOrEmpty(_searchBoxTxt.Text))
             {
                 _resultsListBox.Items.Clear();
                 foreach(var part in parts)
@@ -306,11 +306,32 @@ namespace BannerEdge
                 Process proc = new Process();
                 proc.StartInfo = new ProcessStartInfo(filePath);
                 proc.StartInfo.WorkingDirectory = Path.GetDirectoryName(filePath);
+                proc.EnableRaisingEvents = true;
+                proc.Exited += Proc_Exited;
                 proc.Start();
             }
             else
             {
                 MessageBox.Show("TaleWorlds.TwoDimension.SpriteSheetGenerator.exe not found. Please set the path in the File menu (You must have Bannerlord modding kit installed on Steam.");
+            }
+        }
+
+        private void Proc_Exited(object sender, EventArgs e)
+        {
+            var dir = Properties.Settings.Default.ModulePath;
+            var modname = dir.Split('\\').Last();
+            var spriteDataFilePath = dir + "\\GUI\\" + modname + "SpriteData.xml";
+
+            if (File.Exists(spriteDataFilePath))
+            {
+                XDocument spriteData = XDocument.Load(spriteDataFilePath);
+                var list = spriteData.Descendants("SpriteCategory");
+                foreach (var item in list)
+                {
+                    XElement e2 = new XElement("AlwaysLoad");
+                    item.Add(e2);
+                }
+                spriteData.Save(spriteDataFilePath);
             }
         }
     }

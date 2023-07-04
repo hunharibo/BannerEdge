@@ -40,7 +40,7 @@ You can either export all the found parts, or select one or more individual part
 
 ![Screenshot](banneredge.png)
 
-* Once you are satisfied, hit either of the "Export" buttons.
+* Once you are satisfied, hit either of the "Export" buttons. When prompted for the ui category, enter a unique custom name, make sure it is not the same as base game's. Recommended naming convention is "ui_mycategory" for example.
 * This will create the necessary files within your module's directory. You can find the extracted sprite parts under "GUI\SpriteParts\". Make sure to not move the images from their automatically created nested folders as the path is important for the game to recognize them.
 * You are now free to make changes to the extracted images using your preferred image editor (e.g. GIMP, Photoshop etc.) or replace them outright. If you choose to replace them completely, make sure to keep the dimensions intact otherwise it won't align with other parts ingame.
 * Once you are done, go back to BannerEdge and hit the "Pack Atlas" button. This will call the external SpriteSheetGenerator.exe and generate a new atlas file that only contains your edited images. The file will be created in your module's "AssetSources\GauntletUI" folder.
